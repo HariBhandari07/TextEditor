@@ -133,6 +133,7 @@ export function TextEditor() {
         editorState={editorState}
         onChange={setEditorState}
         handleBeforeInput={handleBeforeInput}
+        // @ts-ignore
         handleReturn={handleReturn}
         customStyleMap={STYLE_MAP}
       />
