@@ -1,0 +1,12 @@
+.appContainer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 16px;
+    flex-direction: column;
+}
+
+.title {
+    padding: 8px 0;
+}

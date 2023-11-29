@@ -1,0 +1,35 @@
+.DraftEditor-root {
+    border: 1px solid #C9C9C9;
+    background-color: #F9F9F9;
+    height: 500px;
+    width: 800px;
+    border-radius: 4px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #f5f5f5 #f5f5f5;
+}
+
+.DraftEditor-editorContainer {
+    padding: 8px;
+}
+
+.public-DraftEditor-content {
+
+}
+.DraftEditor-root::-webkit-scrollbar {
+    width: 10px;
+}
+
+.DraftEditor-root::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+
+.DraftEditor-root::-webkit-scrollbar-thumb {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.DraftEditor-root::-webkit-scrollbar-thumb:hover {
+    background-color: #f5f5f5;
+}
+
