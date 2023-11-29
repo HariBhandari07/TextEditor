@@ -97,12 +97,36 @@ export function TextEditor() {
     }
   };
 
+  const handleClearEditor = () => {
+    setEditorState(() => EditorState.createEmpty());
+  };
+
+  const handleReloadPage = () => {
+    window.location.reload();
+  };
+
+  const handleClearLocalStorage = () => {
+    try {
+      window.localStorage.setItem("editorDocument", "");
+    } catch (e) {
+      console.error("Failed to delete editor data");
+    }
+  };
 
   return (
-    <div>
+    <div style={{width: '100%'}}>
       <section className="buttonGroup">
-        <Button onClick={handleSaveToLocalStorage}>
-          Save Data
+        <Button onClick={handleSaveToLocalStorage} color='green'>
+          💾 Save Data
+        </Button>
+        <Button onClick={handleClearEditor} color='warning'>
+          🧹 Clear Editor
+        </Button>
+        <Button onClick={handleClearLocalStorage} color='danger'>
+          🗑️ Clear Stored Data
+        </Button>
+        <Button onClick={handleReloadPage} color='info'>
+          🔃 Reload Page
         </Button>
       </section>
       <Editor

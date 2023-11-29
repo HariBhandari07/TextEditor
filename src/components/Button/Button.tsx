@@ -1,19 +1,24 @@
 import React, { ComponentProps } from "react";
-import './Button.css'
+import "./Button.css";
 
 
-type Color = "primary" | "warning" | "danger";
-type Variant = "contained" | "outlined" | "text";
+type Color = "green" | "warning" | "danger" | "info";
 
 export interface ButtonProps extends ComponentProps<"button"> {
   color?: Color;
-  variant?: Variant;
   children?: React.ReactNode;
 }
 
-export function Button({ color, variant, children, ...props }: ButtonProps) {
+export function Button({ color, children, ...props }: ButtonProps) {
   return (
-    <button {...props} className='button'>
+    <button
+      {...props}
+      className="button"
+      style={{
+        background: color === "green" ? "#e6ffe6"
+          : color === "warning" ? "#ffffd7"
+            : color === "danger" ? "#ffefef" : "#f8f9fa",
+      }}>
       {children}
     </button>
   );

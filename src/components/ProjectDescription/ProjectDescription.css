@@ -1,0 +1,36 @@
+.notesContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 20px 0
+}
+
+.ul {
+    /*margin-left: 15px;*/
+    background-color: #F9F9F9;
+    border-radius: 4px;
+    padding: 10px 10px 10px 26px;
+}
+li {
+    margin-bottom: 5px;
+}
+
+.infoMargin {
+    margin-bottom: 10px;
+}
+
+.noteWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.note {
+    margin-left: 4px;
+}
+
+@media screen and (min-width: 600px) {
+    /* Change the flex direction to row for larger screens */
+    .noteWrapper {
+        flex-direction: row;
+    }
+}

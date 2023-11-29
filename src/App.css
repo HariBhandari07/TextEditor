@@ -1,5 +1,6 @@
 .appContainer {
     min-height: 100vh;
+    width: 80%;
     display: flex;
     align-items: center;
     margin: auto;
@@ -9,4 +10,5 @@
 
 .title {
     padding: 16px 0;
+    margin-bottom: 20px;
 }

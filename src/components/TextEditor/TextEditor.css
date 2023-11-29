@@ -1,21 +1,37 @@
 .buttonGroup {
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
+    flex-direction: column;
 }
 
-.buttonGroup .button {
-    margin-right: 8px;
+.button {
+    width: 100%;
+    margin-bottom: 10px;
 }
-.buttonGroup .button:last-child {
-    margin-right: 0;
+
+@media screen and (min-width: 600px) {
+    /* Change the flex direction to row for larger screens */
+    .buttonGroup {
+        flex-direction: row;
+        margin-bottom: 20px;
+        justify-content: flex-end;
+    }
+    .button:last-child {
+        margin-right: 0;
+    }
+
+    .button {
+        width: auto;
+        margin-bottom: 0;
+        margin-right: 8px;
+    }
 }
+
 
 .DraftEditor-root {
     border: 1px solid #C9C9C9;
     background-color: #F9F9F9;
     height: 500px;
-    width: 800px;
+    width: 100%;
     border-radius: 4px;
     overflow-y: auto;
     scrollbar-width: thin;
@@ -28,6 +44,7 @@
 .public-DraftEditor-content {
     padding: 8px;
 }
+
 .DraftEditor-root::-webkit-scrollbar {
     width: 10px;
 }
